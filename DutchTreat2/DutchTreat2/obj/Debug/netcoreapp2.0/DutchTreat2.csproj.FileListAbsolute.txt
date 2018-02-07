@@ -9,3 +9,14 @@
 /Users/richard/Projects/DutchTreat2/DutchTreat2/obj/Debug/netcoreapp2.0/DutchTreat2.AssemblyInfo.cs
 /Users/richard/Projects/DutchTreat2/DutchTreat2/obj/Debug/netcoreapp2.0/DutchTreat2.dll
 /Users/richard/Projects/DutchTreat2/DutchTreat2/obj/Debug/netcoreapp2.0/DutchTreat2.pdb
+D:\1_github\mySamples\DutchTreat2\DutchTreat2\bin\Debug\netcoreapp2.0\DutchTreat2.deps.json
+D:\1_github\mySamples\DutchTreat2\DutchTreat2\bin\Debug\netcoreapp2.0\DutchTreat2.runtimeconfig.json
+D:\1_github\mySamples\DutchTreat2\DutchTreat2\bin\Debug\netcoreapp2.0\DutchTreat2.runtimeconfig.dev.json
+D:\1_github\mySamples\DutchTreat2\DutchTreat2\bin\Debug\netcoreapp2.0\DutchTreat2.dll
+D:\1_github\mySamples\DutchTreat2\DutchTreat2\bin\Debug\netcoreapp2.0\DutchTreat2.pdb
+D:\1_github\mySamples\DutchTreat2\DutchTreat2\obj\Debug\netcoreapp2.0\DutchTreat2.csprojResolveAssemblyReference.cache
+D:\1_github\mySamples\DutchTreat2\DutchTreat2\obj\Debug\netcoreapp2.0\DutchTreat2.csproj.CoreCompileInputs.cache
+D:\1_github\mySamples\DutchTreat2\DutchTreat2\obj\Debug\netcoreapp2.0\DutchTreat2.AssemblyInfoInputs.cache
+D:\1_github\mySamples\DutchTreat2\DutchTreat2\obj\Debug\netcoreapp2.0\DutchTreat2.AssemblyInfo.cs
+D:\1_github\mySamples\DutchTreat2\DutchTreat2\obj\Debug\netcoreapp2.0\DutchTreat2.dll
+D:\1_github\mySamples\DutchTreat2\DutchTreat2\obj\Debug\netcoreapp2.0\DutchTreat2.pdb
