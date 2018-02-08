@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{908E7D04-6EFE-4364-9A66-DC929116F6CB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="DutchTreat2/wwwroot/css/site.css">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DutchTreat2/bower.json">
     <Files>
-      <File FileName="DutchTreat2/Program.cs" Line="21" Column="41" />
-      <File FileName="DutchTreat2/Startup.cs" Line="24" Column="34" />
-      <File FileName="DutchTreat2/wwwroot/index.html" Line="10" Column="33" />
-      <File FileName="DutchTreat2/wwwroot/css/site.css" Line="45" Column="24" />
+      <File FileName="DutchTreat2/wwwroot/js/index.js" Line="1" Column="1" />
+      <File FileName="DutchTreat2/Controllers/AppController.cs" Line="31" Column="9" />
+      <File FileName="DutchTreat2/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="DutchTreat2/wwwroot/css/site.css" Line="82" Column="16" />
+      <File FileName="DutchTreat2/bower.json" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
