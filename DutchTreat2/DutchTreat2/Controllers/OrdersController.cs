@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using DutchTreat2.Data;
 using DutchTreat2.Data.Entities;
+using DutchTreat2.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -47,17 +48,36 @@ namespace DutchTreat2.Controllers {
         }
 
         [HttpPost()]
-        public IActionResult Post([FromBody] Order order){
+        public IActionResult Post([FromBody] OrderViewModel order){
             try{
-                // var order = _repository.GetOrderById(id);
+                if(ModelState.IsValid){
 
-                _repository.AddEntity(order);
+                    var newOrder = new Order{
+                        OrderDate = order.OrderDate,
+                        OrderNumber = order.OrderNumber,
+                        Id = order.OrderId
+                    };
 
-                if(_repository.SaveAll()){
-                    return Created($"api/orders/{order.Id}", order);
-                }               
+                    if(newOrder.OrderDate == DateTime.MinValue){
+                        newOrder.OrderDate = DateTime.Now;
+                    }
+
+                    _repository.AddEntity(newOrder);
+
+                    if(_repository.SaveAll()){
+                        var vm = new OrderViewModel{
+                            OrderId = newOrder.Id,
+                            OrderDate = newOrder.OrderDate,
+                            OrderNumber = newOrder.OrderNumber
+                        };
+                        return Created($"api/orders/{vm.OrderId}", vm);
+                    }  
+                    else{
+                        throw new Exception("Save failed.");
+                    }
+                }    
                 else{
-                    return BadRequest("Failed to save order.");
+                    return BadRequest(ModelState);
                 } 
             }
             catch(Exception ex){
