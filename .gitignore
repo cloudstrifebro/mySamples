@@ -3,3 +3,4 @@ DutchTreat2/DutchTreat2/config.json
 *.pdb
 bin/
 obj/
+*.suo
