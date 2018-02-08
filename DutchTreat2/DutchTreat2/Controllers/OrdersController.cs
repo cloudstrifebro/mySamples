@@ -27,5 +27,23 @@ namespace DutchTreat2.Controllers {
                 return BadRequest("Failed to get products");
             }
         }
+
+        [HttpGet("{id}")]
+        public IActionResult Get(int id){
+            try{
+                var order = _repository.GetOrderById(id);
+
+                if(order != null){
+                    return Ok();
+                }               
+                else{
+                    return NotFound();
+                } 
+            }
+            catch(Exception ex){
+                _logger.LogError($"Failed to get products: {ex}");
+                return BadRequest("Failed to get products");
+            }
+        }
     }
 }

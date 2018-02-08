@@ -45,6 +45,19 @@ namespace DutchTreat2.Data{
             }
         }
 
+        public Order GetOrderById(int id)
+        {
+                 try{
+                return _context.Orders
+                    .Where(o => o.Id == id)
+                .FirstOrDefault();
+            }
+             catch(Exception ex){
+                _logger.LogInformation($"Failed to get all orders: {ex}");
+                return null;
+            }
+        }
+
         public IEnumerable<Product> GetProductsByCategory(string category){
             return _context.Products
                 .Where(p => p.Category == category)
