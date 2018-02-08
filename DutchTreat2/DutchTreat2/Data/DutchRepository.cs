@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using DutchTreat2.Data.Entities;
+using Microsoft.Extensions.Logging;
 
 namespace DutchTreat2.Data{
     public class DutchRepository : IDutchRepository{
@@ -15,11 +17,16 @@ namespace DutchTreat2.Data{
         }
 
         public IEnumerable<Product> GetAllProducts(){
-            _logger.LogInformation("Get all products was called.");
-
-            return _context.Products
+            // _logger.LogInformation("Get all products was called.");
+            try{
+                return _context.Products
                 .OrderBy(p => p.Title)
                 .ToList();
+            }
+             catch(Exception ex){
+                _logger.LogInformation($"Failed to get all products: {ex}");
+                return null;
+            }
         }
 
         public IEnumerable<Product> GetProductsByCategory(string category){
