@@ -17,6 +17,11 @@ namespace DutchTreat2.Data{
 
         }
 
+        public void AddEntity(object model)
+        {
+            _context.Add(model);
+        }
+
         public IEnumerable<Order> GetAllOrders()
         {
                   try{
@@ -49,7 +54,9 @@ namespace DutchTreat2.Data{
         {
                  try{
                 return _context.Orders
-                    .Where(o => o.Id == id)
+                .Include(o => o.Items)
+                .ThenInclude(i => i.Product)
+                .Where(o => o.Id == id)
                 .FirstOrDefault();
             }
              catch(Exception ex){

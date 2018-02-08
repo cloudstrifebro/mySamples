@@ -28,13 +28,13 @@ namespace DutchTreat2.Controllers {
             }
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public IActionResult Get(int id){
             try{
                 var order = _repository.GetOrderById(id);
 
                 if(order != null){
-                    return Ok();
+                    return Ok(order);
                 }               
                 else{
                     return NotFound();
@@ -43,6 +43,26 @@ namespace DutchTreat2.Controllers {
             catch(Exception ex){
                 _logger.LogError($"Failed to get products: {ex}");
                 return BadRequest("Failed to get products");
+            }
+        }
+
+        [HttpPost()]
+        public IActionResult Post([FromBody] Order order){
+            try{
+                // var order = _repository.GetOrderById(id);
+
+                _repository.AddEntity(order);
+
+                if(_repository.SaveAll()){
+                    return Created($"api/orders/{order.Id}", order);
+                }               
+                else{
+                    return BadRequest("Failed to save order.");
+                } 
+            }
+            catch(Exception ex){
+                _logger.LogError($"Failed to save order: {ex}");
+                return BadRequest("Failed to save order");
             }
         }
     }
