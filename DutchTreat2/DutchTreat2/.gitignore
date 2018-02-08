@@ -1,8 +1,0 @@
-config.json
-*.dll
-*.pdb
-bin/*
-obj/*
-bin/**/*
-obj/**/*
-DutchTreat2/DutchTreat2/config.json
