@@ -1,11 +1,12 @@
-﻿<Properties StartupConfiguration="{908E7D04-6EFE-4364-9A66-DC929116F6CB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="DutchTreat2/bower.json">
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="DutchTreat2/Controllers/AppController.cs">
     <Files>
       <File FileName="DutchTreat2/wwwroot/js/index.js" Line="1" Column="1" />
-      <File FileName="DutchTreat2/Controllers/AppController.cs" Line="31" Column="9" />
+      <File FileName="DutchTreat2/Controllers/AppController.cs" Line="1" Column="1" />
       <File FileName="DutchTreat2/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
       <File FileName="DutchTreat2/wwwroot/css/site.css" Line="82" Column="16" />
-      <File FileName="DutchTreat2/bower.json" Line="1" Column="1" />
+      <File FileName="DutchTreat2/bower.json" Line="9" Column="15" />
+      <File FileName="DutchTreat2/Views/_ViewImports.cshtml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -13,6 +14,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.DutchTreat2 PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
 </Properties>

@@ -29,6 +29,10 @@ namespace DutchTreat2
                 cfg.UseSqlServer(_config.GetConnectionString("DutchConnectionString"));
             });
             services.AddTransient<IMailService, NullMailService>();
+            services.AddTransient<DutchSeeder>();
+
+            services.AddScoped<IDutchRepository, DutchRepository>();
+
             services.AddMvc();
         }
 
@@ -52,6 +56,14 @@ namespace DutchTreat2
                 cfg.MapRoute("Default", "{controller}/{action}/{id?}", 
                     new { controller = "App", Action = "Index" });
             });
+
+             if (env.IsDevelopment())//set in project properties under environment variables
+            {
+                using(var scope = app.ApplicationServices.CreateScope()){
+                    var seeder = scope.ServiceProvider.GetService<DutchSeeder>();
+                    seeder.Seed();
+                }
+            }
         }
     }
 }

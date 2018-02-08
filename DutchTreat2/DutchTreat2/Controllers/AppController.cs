@@ -5,16 +5,19 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using DutchTreat2.ViewModels;
 using DutchTreat2.Services;
+using DutchTreat2.Data;
 
 namespace DutchTreat2.Controllers
 {
     public class AppController : Controller
     {
         private readonly IMailService _mailService;
+        private readonly IDutchRepository _repository;
 
-        public AppController(IMailService mailService)
+        public AppController(IMailService mailService, IDutchRepository repository)
         {
             _mailService = mailService;
+            _repository = repository;
         }
         public IActionResult Index()
         {
@@ -47,6 +50,13 @@ namespace DutchTreat2.Controllers
             ViewBag.Title = "About Us";
 
             return View();
+        }
+
+        public IActionResult Shop()
+        {          
+            var results = _repository.GetAllProducts();
+
+            return View(results.ToList());
         }
 
     }

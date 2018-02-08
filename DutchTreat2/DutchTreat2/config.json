@@ -3,6 +3,11 @@
         "Favorite": "blue"
     },
     "ConnectionStrings":{
-        "DutchConnectionString": "Server=rdaws.c8yc8wh5ylar.us-west-2.rds.amazonaws.com,1433;Database=DutchTreatDb;User Id=cloudstrifebro;Password=!*jEm4TpXJ9%Au6#F6QCa;Integrated Security=false;MultipleActiveResultSets=true;"
+        "DutchConnectionString": ""
+    },
+    "Logging":{
+        "LogLevel":{
+            "Default": "Warning"
+        }
     }
 }
