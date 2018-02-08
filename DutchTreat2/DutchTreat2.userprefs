@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="DutchTreat2/Controllers/AppController.cs">
+    <Files>
+      <File FileName="DutchTreat2/wwwroot/js/index.js" Line="1" Column="1" />
+      <File FileName="DutchTreat2/Controllers/AppController.cs" Line="1" Column="1" />
+      <File FileName="DutchTreat2/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="DutchTreat2/wwwroot/css/site.css" Line="82" Column="16" />
+      <File FileName="DutchTreat2/bower.json" Line="9" Column="15" />
+      <File FileName="DutchTreat2/Views/_ViewImports.cshtml" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

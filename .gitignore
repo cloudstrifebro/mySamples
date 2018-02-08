@@ -1,0 +1,5 @@
+DutchTreat2/DutchTreat2/config.json
+*.dll
+*.pdb
+bin/
+obj/
