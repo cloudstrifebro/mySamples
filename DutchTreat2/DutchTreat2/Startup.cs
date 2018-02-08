@@ -11,6 +11,7 @@ using DutchTreat2.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using AutoMapper;
 
 namespace DutchTreat2
 {
@@ -29,6 +30,9 @@ namespace DutchTreat2
             services.AddDbContext<DutchContext>( cfg => {
                 cfg.UseSqlServer(_config.GetConnectionString("DutchConnectionString"));
             });
+
+            services.AddAutoMapper();
+
             services.AddTransient<IMailService, NullMailService>();
             services.AddTransient<DutchSeeder>();
 
