@@ -26,7 +26,7 @@ namespace DutchTreat2.Controllers {
         [HttpGet]
         public IActionResult Get(){
             try{
-                return Ok(_repository.GetAllOrders());
+                return Ok(_mapper.Map<IEnumerable<Order>, IEnumerable<OrderViewModel>>(_repository.GetAllOrders()));
             }
             catch(Exception ex){
                 _logger.LogError($"Failed to get products: {ex}");
@@ -59,11 +59,7 @@ namespace DutchTreat2.Controllers {
             try{
                 if(ModelState.IsValid){
 
-                    var newOrder = new Order{
-                        OrderDate = order.OrderDate,
-                        OrderNumber = order.OrderNumber,
-                        Id = order.OrderId
-                    };
+                    var newOrder = _mapper.Map<OrderViewModel, Order>(order);
 
                     if(newOrder.OrderDate == DateTime.MinValue){
                         newOrder.OrderDate = DateTime.Now;
@@ -72,11 +68,7 @@ namespace DutchTreat2.Controllers {
                     _repository.AddEntity(newOrder);
 
                     if(_repository.SaveAll()){
-                        var vm = new OrderViewModel{
-                            OrderId = newOrder.Id,
-                            OrderDate = newOrder.OrderDate,
-                            OrderNumber = newOrder.OrderNumber
-                        };
+                        var vm = _mapper.Map<Order, OrderViewModel>(newOrder);
                         return Created($"api/orders/{vm.OrderId}", vm);
                     }  
                     else{
