@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using DutchTreat2.Data.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace DutchTreat2.Data{
@@ -14,6 +15,21 @@ namespace DutchTreat2.Data{
             _context = context;
             _logger = logger;
 
+        }
+
+        public IEnumerable<Order> GetAllOrders()
+        {
+                  try{
+                return _context.Orders
+                .Include(o => o.Items)
+                .ThenInclude(i => i.Product)
+                .OrderBy(p => p.OrderNumber)
+                .ToList();
+            }
+             catch(Exception ex){
+                _logger.LogInformation($"Failed to get all orders: {ex}");
+                return null;
+            }
         }
 
         public IEnumerable<Product> GetAllProducts(){
