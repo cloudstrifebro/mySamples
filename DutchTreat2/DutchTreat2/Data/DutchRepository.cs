@@ -22,18 +22,18 @@ namespace DutchTreat2.Data{
             _context.Add(model);
         }
 
-        public IEnumerable<Order> GetAllOrders()
+        public IEnumerable<Order> GetAllOrders(bool includeItems)
         {
-                  try{
+            if(includeItems){
                 return _context.Orders
                 .Include(o => o.Items)
                 .ThenInclude(i => i.Product)
                 .OrderBy(p => p.OrderNumber)
                 .ToList();
             }
-             catch(Exception ex){
-                _logger.LogInformation($"Failed to get all orders: {ex}");
-                return null;
+            else{
+                return _context.Orders
+                .ToList();
             }
         }
 
