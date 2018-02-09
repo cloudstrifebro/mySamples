@@ -12,6 +12,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using AutoMapper;
+using DutchTreat2.Data.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace DutchTreat2
 {
@@ -27,6 +29,11 @@ namespace DutchTreat2
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddIdentity<StoreUser, IdentityRole>(cfg => {
+                cfg.User.RequireUniqueEmail = true;            
+            })
+            .AddEntityFrameworkStores<DutchContext>();
+
             services.AddDbContext<DutchContext>( cfg => {
                 cfg.UseSqlServer(_config.GetConnectionString("DutchConnectionString"));
             });
@@ -36,7 +43,7 @@ namespace DutchTreat2
             services.AddTransient<IMailService, NullMailService>();
             services.AddTransient<DutchSeeder>();
 
-            services.AddScoped<IDutchRepository, DutchRepository>();
+            services.AddScoped<IDutchRepository, DutchRepository>();        
 
             services.AddMvc()
                 .AddJsonOptions(o => o.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
@@ -57,6 +64,8 @@ namespace DutchTreat2
             //app.UseDefaultFiles();
             app.UseStaticFiles();
 
+            app.UseAuthentication();
+
             app.UseMvc(cfg =>
             {
                 cfg.MapRoute("Default", "{controller}/{action}/{id?}", 
@@ -67,7 +76,7 @@ namespace DutchTreat2
             {
                 using(var scope = app.ApplicationServices.CreateScope()){
                     var seeder = scope.ServiceProvider.GetService<DutchSeeder>();
-                    seeder.Seed();
+                    seeder.Seed().Wait();
                 }
             }
         }
