@@ -27,7 +27,7 @@ namespace DutchTreat2.Controllers {
         public IActionResult Get(bool includeItems = true){
             try{
                 var results = _repository.GetAllOrders(includeItems);
-                return Ok(_mapper.Map<IEnumerable<Order>, IEnumerable<OrderViewModel>>(_repository.GetAllOrders()));
+                return Ok(_mapper.Map<IEnumerable<Order>, IEnumerable<OrderViewModel>>(results));
             }
             catch(Exception ex){
                 _logger.LogError($"Failed to get products: {ex}");
