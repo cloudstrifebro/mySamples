@@ -6,9 +6,12 @@ using DutchTreat2.Data.Entities;
 using DutchTreat2.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace DutchTreat2.Controllers {
     [Route("api/[Controller]")]
+    [Authorize(AuthenticationSchemes =  JwtBearerDefaults.AuthenticationScheme)]
     public class OrdersController : Controller {
         private readonly IDutchRepository _repository;
         private readonly ILogger<OrdersController> _logger;
@@ -26,7 +29,9 @@ namespace DutchTreat2.Controllers {
         [HttpGet]
         public IActionResult Get(bool includeItems = true){
             try{
-                var results = _repository.GetAllOrders(includeItems);
+                var username = User.Identity.Name;
+
+                var results = _repository.GetAllOrdersByUser(username, includeItems);
                 return Ok(_mapper.Map<IEnumerable<Order>, IEnumerable<OrderViewModel>>(results));
             }
             catch(Exception ex){
