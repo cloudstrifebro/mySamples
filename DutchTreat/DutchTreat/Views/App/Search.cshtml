@@ -1,0 +1,71 @@
+﻿@model  List<ProductViewModel>
+@{
+    ViewBag.Title = "Search";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            @*<div class="well well-sm">
+                    <label asp-for="ParameterText">Search</label>
+                    <input class="form-control" type="text" asp-for="ParameterText" />
+                </div>*@
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Search Results
+        </div>
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Art Id</th>
+                        <th scope="col">Artist</th>
+                        <th scope="col">Category</th>                       
+                        <th scope="col">Size</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody class="table-hover">
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            @{
+                                <td scope="row">@item.Id</td>
+                            }
+
+                            @{
+                                <td scope="row">@item.ArtId</td>
+                            }
+
+                            @{
+                                <td scope="row">@item.Artist</td>
+                            }
+
+                            @{
+                                <td scope="row">@item.Category</td>
+                            }
+
+
+                            @{
+                                <td scope="row">@item.Size</td>
+                            }
+
+                            @{
+                                <td scope="row">@item.Title</td>
+                            }
+
+                            @{
+                                <td scope="row">@item.Price</td>
+                            }
+
+
+                        </tr>
+                                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
