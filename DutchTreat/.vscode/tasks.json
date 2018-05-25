@@ -9,7 +9,23 @@
                 "build",
                 "${workspaceFolder}/DutchTreat/DutchTreat.csproj"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "buildRun",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "run",
+                "--project",
+                "${workspaceFolder}/DutchTreat/DutchTreat.csproj"
+            ],
+            "problemMatcher": "$msCompile"     
+
         }
     ]
 }
