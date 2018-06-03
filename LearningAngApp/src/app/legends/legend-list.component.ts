@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 import { map, filter } from 'rxjs/operators';
 import { LegendService } from '../services/legend.service';
 import { ILegend } from './legend';
@@ -12,6 +12,13 @@ import { ILegend } from './legend';
 })
 
 export class LegendListComponent implements OnInit {
+  legends: ILegend[] = [];
+  filteredLegends: ILegend[];
+  showImage: boolean;
+  _dmgListFilter: number;
+  _listFilter: string;
+  private _legendService;
+
   ngOnInit(): void {
     // this.legends = this._legendService.getLegends();
     this._legendService.getLegends()
@@ -22,8 +29,6 @@ export class LegendListComponent implements OnInit {
         },
         errors => console.log(<any>errors));
   }
-
-  private _legendService;
 
   get listFilter(): string {
     return this._listFilter;
@@ -55,9 +60,8 @@ export class LegendListComponent implements OnInit {
   }
 
   performFilter(filterBy: string): ILegend[] {
-    console.log(filterBy);
-    filterBy = filterBy.toLocaleLowerCase();//.ToLocalLowerCase();
-    return this.legends.filter((legend: ILegend) => legend.id.toLocaleLowerCase().indexOf(filterBy) !== -1);
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.legends.filter((legend: ILegend) => legend.name.toLocaleLowerCase().indexOf(filterBy) !== -1);
   }
 
   getLegendWithHighestAdScaling(filterBy: number): ILegend[] {
@@ -72,10 +76,4 @@ export class LegendListComponent implements OnInit {
   scaleImage(legend: ILegend): void {
 
   }
-
-  legends: ILegend[] = [];
-  filteredLegends: ILegend[] = [];
-  showImage: boolean;
-  _dmgListFilter: number;
-  _listFilter: string;
 }

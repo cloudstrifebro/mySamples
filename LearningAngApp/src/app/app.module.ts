@@ -4,14 +4,18 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './products/product-list.component';
 import { FormsModule } from '@angular/forms';
 import { LegendListComponent } from './legends/legend-list.component';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
 import { LegendService } from './services/legend.service';
+import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
+import { TimecardDayComponent } from './timecards/timecard-day.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
-    LegendListComponent
+    LegendListComponent,
+    ConvertToSpacesPipe,
+    TimecardDayComponent
   ],
   imports: [
     BrowserModule,

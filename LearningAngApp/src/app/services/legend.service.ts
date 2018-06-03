@@ -9,9 +9,9 @@ export class LegendService  {
     // private _legendsUrl = 'http://localhost:4200/api/legends/legends.json';
     // private _legendsUrl = '../api/legends/legends.json';
     private _legendsUrl = 'https://raw.githubusercontent.com/ngryman/lol-champions/master/champions.json';
-    constructor(private _http: HttpClient){}
+    constructor(private _http: HttpClient) { }
 
-    getLegends() : Observable<ILegend[]>{
+    getLegends(): Observable<ILegend[]> {
         return this._http.get<ILegend[]>(this._legendsUrl);
     }
 }

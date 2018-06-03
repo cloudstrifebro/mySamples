@@ -1,4 +1,4 @@
-export interface ILegend{
+export interface ILegend {
     id: string;
     key: number;
     title: string;
@@ -7,4 +7,5 @@ export interface ILegend{
     icon: string;
     sprite: any;
     description: string;
+    name: string;
 }
