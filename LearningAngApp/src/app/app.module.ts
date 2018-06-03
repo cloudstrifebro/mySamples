@@ -24,7 +24,6 @@ import { StarComponent } from './shared/star.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [LegendService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
