@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ITimecardDay } from "./timecard-day";
 
 @Component({
-  selector: 'timecard-day',
+  selector: 'pm-timecard-day',
   templateUrl: './template-day.component.html'
 })
 

@@ -1,6 +1,10 @@
 // Place your settings in this file to overwrite default and user settings.
 {
     "files.autoSave": "afterDelay",
-    "editor.wordWrap": "on"
-    
+    "editor.wordWrap": "on",
+    "editor.tabSize": 5,
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": false,
+    "html.format.endWithNewline": false,
+    "editor.formatOnSave": false,
 }

@@ -15,6 +15,9 @@ export class LegendListComponent implements OnInit {
   legends: ILegend[] = [];
   filteredLegends: ILegend[];
   showImage: boolean;
+  pageTitle: string = "Test";
+  imageWidth: number;
+  imageMargin: number;
   _dmgListFilter: number;
   _listFilter: string;
   private _legendService;

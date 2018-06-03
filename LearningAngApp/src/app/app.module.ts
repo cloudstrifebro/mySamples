@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LegendService } from './services/legend.service';
 import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
 import { TimecardDayComponent } from './timecards/timecard-day.component';
+import { StarComponent } from './shared/star.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TimecardDayComponent } from './timecards/timecard-day.component';
     ProductListComponent,
     LegendListComponent,
     ConvertToSpacesPipe,
-    TimecardDayComponent
+    TimecardDayComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,
