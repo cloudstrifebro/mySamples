@@ -1,22 +1,15 @@
-import { Component, OnInit } from "@angular/core";
-import { ITimecardDay } from "./timecard-day";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'pm-timecard-day',
-  templateUrl: './template-day.component.html'
+  templateUrl: './timecard-day.component.html',
+  styleUrls: ['./timecard-day.component.css']
 })
-
 export class TimecardDayComponent implements OnInit {
-  private timecardDay: ITimecardDay;
-  /**
-   *
-   */
-  constructor() {
 
-  }
+  constructor() { }
 
-  ngOnInit(): void {
-    console.log('Started oninit for timecard day compoent');
+  ngOnInit() {
   }
 
 }

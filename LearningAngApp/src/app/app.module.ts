@@ -12,12 +12,12 @@ import { WelcomeComponent } from './home/welcome.component';
 import { ProductModule } from './products/product.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
+import { TimecardModule } from './timecards/timecard.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LegendListComponent,
-    TimecardDayComponent,
     WelcomeComponent,
   ],
   imports: [
@@ -25,9 +25,9 @@ import { SharedModule } from './shared/shared.module';
     HttpClientModule,
     // feature modules
     ProductModule,
+    TimecardModule,
     SharedModule,
     AppRoutingModule
-
   ],
   providers: [LegendService],
   bootstrap: [AppComponent]

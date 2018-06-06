@@ -12,6 +12,7 @@ import { LegendService } from './services/legend.service';
           <ul class='nav navbar-nav'>
             <li><a [routerLink]="['/welcome']">Home</a></li>
             <li><a [routerLink]="['/products']">Product List</a></li>
+            <li><a [routerLink]="['/timecards']">Timecard List</a></li>
           </ul>
         </div>
       </nav>
