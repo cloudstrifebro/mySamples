@@ -6,10 +6,11 @@ import { TimecardDetailComponent } from './timecard-detail.component';
 import { TimecardDayComponent } from './timecard-day.component';
 import { TimecardRuleComponent } from './timecard-rule.component';
 import { TimecardTimeRangeComponent } from './timecard-time-range.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
-    CommonModule,
+    SharedModule,
     TimecardRoutingModule
   ],
   declarations: [TimecardComponent, TimecardDetailComponent, TimecardDayComponent, TimecardRuleComponent, TimecardTimeRangeComponent]

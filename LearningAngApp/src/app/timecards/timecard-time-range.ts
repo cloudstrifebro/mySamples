@@ -1,5 +1,8 @@
+import { ICalendarItem } from './calendar-item';
+import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+
 export interface ITimecardTimeRange {
-  timeIn: Date;
-  timeOut: Date;
+  timeIn: NgbDateStruct;
+  timeOut: NgbDateStruct;
   timeType: string;
 }
