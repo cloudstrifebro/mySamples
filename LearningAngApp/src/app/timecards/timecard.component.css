@@ -1,13 +1,13 @@
-.day{
-display: inline-block;
-margin: 10px;
-}
-
-.timecard-item{
+.day {
   display: inline-block;
   margin: 10px;
-  }
+}
 
-  label  {
-    width: 115px;
-  }
+.timecard-item {
+  display: inline-block;
+  margin: 10px;
+}
+
+label {
+  width: 115px;
+}
