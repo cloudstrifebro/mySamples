@@ -7,13 +7,16 @@
 <div>
     <input class='form-control' type="text" [(ngModel)]='timeType' />
 </div> -->
-
-<div class="input-group">
+<!-- TODO: add angular class to override and add custom styles -->
+<div style='width: 15%;' class="input-group">
     <input class="form-control" placeholder="yyyy-mm-dd"
            name="dp" [(ngModel)]="timeIn" ngbDatepicker #d="ngbDatepicker">
     <div class="input-group-append">
       <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
-        <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+        <img src="/assets/images/calendar-icon.svg"
+        style="width: 1.2rem; height: 1rem; cursor: pointer;"
+         />
       </button>
+      <!-- style="width: 1.2rem; height: 1rem; cursor: pointer;" -->
     </div>
   </div>
