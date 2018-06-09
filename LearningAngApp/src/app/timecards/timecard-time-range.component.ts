@@ -21,6 +21,9 @@ export class TimecardTimeRangeComponent implements OnInit {
   public timeIn;
   public timeType: string;
 
+  public amPmOnIn: boolean;
+  public amPmOnOut: boolean;
+
   private _timeOut;
   private _timeIn;
   private _timeType: string;
@@ -47,6 +50,8 @@ export class TimecardTimeRangeComponent implements OnInit {
 
     this._timeIn = this.timeIn;
     this._timeOut = this.timeOut;
+
+
     // const sampleRange: ITimecardTimeRange = {
     //   timeIn: timecardInDay,
     //   timeOut: timecardOutDay,
@@ -56,5 +61,13 @@ export class TimecardTimeRangeComponent implements OnInit {
     // this.timecardTimeRange = sampleRange;
     // this._timecardTimeRange = this.timecardTimeRange;
   }
+
+  toggleMeridianIn(): void {
+    this.amPmOnIn = !this.amPmOnIn;
+  }
+
+toggleMeridianOut(): void {
+  this.amPmOnOut = !this.amPmOnOut;
+}
 
 }

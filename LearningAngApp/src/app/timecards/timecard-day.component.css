@@ -1,0 +1,33 @@
+.first-block{
+display: inline-block;
+/* width: 100%; */
+/* margin: 1%; */
+}
+
+.first-block-label{
+  display: inline-block;
+  width: 40px;
+  }
+
+.first-block-directive{
+    display: inline-block;
+    /* width: 97%; */
+    }
+
+.second-block{
+      display: inline-block;
+      /* width: 100%;
+      margin: 1%; */
+      }
+
+.second-block-label{
+        display: inline-block;
+        width: 40px;
+        margin-left: 15px;
+        /* width: 3%; */
+        }
+
+.second-block-directive{
+          display: inline-block;
+          /* width: 97%; */
+          }

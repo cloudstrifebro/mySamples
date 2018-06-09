@@ -8,7 +8,7 @@
     <input class='form-control' type="text" [(ngModel)]='timeType' />
 </div> -->
 <!-- TODO: add angular class to override and add custom styles -->
-<div style='width: 15%;' class="input-group">
+<!-- <div class="input-group">
     <input class="form-control" placeholder="yyyy-mm-dd"
            name="dp" [(ngModel)]="timeIn" ngbDatepicker #d="ngbDatepicker">
     <div class="input-group-append">
@@ -17,6 +17,14 @@
         style="width: 1.2rem; height: 1rem; cursor: pointer;"
          />
       </button>
-      <!-- style="width: 1.2rem; height: 1rem; cursor: pointer;" -->
     </div>
-  </div>
+  </div> -->
+
+  <ngb-timepicker [(ngModel)]="timeIn" [meridian]="amPmOnIn"></ngb-timepicker>
+  <button class="btn btn-sm btn-outline-{{amPmOnIn ? 'success' : 'danger'}}" (click)="toggleMeridianIn()">
+      Meridian - {{amPmOnIn ? "ON" : "OFF"}}
+  </button>
+  <ngb-timepicker [(ngModel)]="timeOut" [meridian]="amPmOnOut"></ngb-timepicker>
+  <button class="btn btn-sm btn-outline-{{amPmOnOut ? 'success' : 'danger'}}" (click)="toggleMeridianOut()">
+      Meridian - {{amPmOnOut ? "ON" : "OFF"}}
+  </button>
