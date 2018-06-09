@@ -1,107 +1,92 @@
 <!-- <div *ngFor='let timecardDay of timecardDays'>
   <pm-timecard-day></pm-timecard-day>
 </div> -->
-<div class='card' *ngIf='false'>
-    <div class='card-header'>Sunday</div>
-    <div class='card-body'>
-        <div class='day'>
-            <label class='day-label'>Sunday:</label>
-            <div class='timecard-item'>
-                <pm-timecard-day></pm-timecard-day>
-            </div>
-            <div class='timecard-item'>
-                <pm-timecard-day></pm-timecard-day>
-            </div>
-            </div>
-    </div>
-</div>
-
 <div class='card'>
-    <div class='card-header'>Monday</div>
-    <div class='card-body'>
-        <div class='day'>
-            <label class='day-label'>Custom Label Here</label>
-            <div class='timecard-item'>
-                <pm-timecard-day></pm-timecard-day>
-            </div>
-            <div class='timecard-item'>
-                <pm-timecard-day></pm-timecard-day>
-            </div>
-            </div>
-    </div>
+<div class='card-header'></div>
+<div class='card-body'>
+<div>
+  <input [checked]='isSelected1' [value]='1' (change)='onRadioChange(1)' type='radio' />
+  <label>Test 1</label>
 </div>
-
+<div>
+  <input [checked]='isSelected2' [value]='2' (change)='onRadioChange(2)' type='radio' />
+  <label>Test 2</label>
+</div>
+<div>
+  <input [checked]='isSelected3' [value]='3' (change)='onRadioChange(3)' type='radio' />
+  <label>Test 3</label>
+</div>
+<div>
+  <input [checked]='isSelected4' [value]='4' (change)='onRadioChange(4)' type='radio' />
+  <label>Test 4</label>
+</div>
+</div>
+</div>
 <div class='card'>
-    <div class='card-header'>Tuesday</div>
-    <div class='card-body'>
-        <div class='day'>
-            <label class='day-label'>Custom Label Here</label>
-            <div class='timecard-item'>
-                <pm-timecard-day></pm-timecard-day>
-            </div>
-            <div class='timecard-item'>
-                <pm-timecard-day></pm-timecard-day>
-            </div>
-            </div>
+  <div class='card-header'>Timecard for week of: {{timecardDate}}</div>
+  <div class='card-body'>
+    <div class='day' *ngIf='false'>
+      <label class='day-label'>Sunday:</label>
+      <div class='timecard-item'>
+        <pm-timecard-day></pm-timecard-day>
+      </div>
+      <div class='timecard-item'>
+        <pm-timecard-day></pm-timecard-day>
+      </div>
     </div>
-</div>
-
-<div class='card'>
-    <div class='card-header'>Wednesday</div>
-    <div class='card-body'>
-        <div class='day'>
-            <label class='day-label'>Custom Label Here</label>
-            <div class='timecard-item'>
-                <pm-timecard-day></pm-timecard-day>
-            </div>
-            <div class='timecard-item'>
-                <pm-timecard-day></pm-timecard-day>
-            </div>
-            </div>
+    <div class='day'>
+      <label class='day-label'>Monday</label>
+      <div class='timecard-item'>
+        <pm-timecard-day></pm-timecard-day>
+      </div>
+      <div class='timecard-item'>
+        <pm-timecard-day></pm-timecard-day>
+      </div>
     </div>
-</div>
-
-<div class='card'>
-    <div class='card-header'>Thursday</div>
-    <div class='card-body'>
-        <div class='day'>
-            <label class='day-label'>Custom Label Here</label>
-            <div class='timecard-item'>
-                <pm-timecard-day></pm-timecard-day>
-            </div>
-            <div class='timecard-item'>
-                <pm-timecard-day></pm-timecard-day>
-            </div>
-            </div>
+    <div class='day'>
+      <label class='day-label'>Tuesday</label>
+      <div class='timecard-item'>
+        <pm-timecard-day></pm-timecard-day>
+      </div>
+      <div class='timecard-item'>
+        <pm-timecard-day></pm-timecard-day>
+      </div>
     </div>
-</div>
-
-<div class='card'>
-    <div class='card-header'>Friday</div>
-    <div class='card-body'>
-        <div class='day'>
-            <label class='day-label'>Custom Label Here</label>
-            <div class='timecard-item'>
-                <pm-timecard-day></pm-timecard-day>
-            </div>
-            <div class='timecard-item'>
-                <pm-timecard-day></pm-timecard-day>
-            </div>
-            </div>
+    <div class='day'>
+      <label class='day-label'>Wednesday</label>
+      <div class='timecard-item'>
+        <pm-timecard-day></pm-timecard-day>
+      </div>
+      <div class='timecard-item'>
+        <pm-timecard-day></pm-timecard-day>
+      </div>
     </div>
-</div>
-
-<div class='card' *ngIf='false'>
-    <div class='card-header'>Saturday</div>
-    <div class='card-body'>
-        <div class='day'>
-            <label class='day-label'>Custom Label Here</label>
-            <div class='timecard-item'>
-                <pm-timecard-day></pm-timecard-day>
-            </div>
-            <div class='timecard-item'>
-                <pm-timecard-day></pm-timecard-day>
-            </div>
-            </div>
+    <div class='day'>
+      <label class='day-label'>Thursday</label>
+      <div class='timecard-item'>
+        <pm-timecard-day></pm-timecard-day>
+      </div>
+      <div class='timecard-item'>
+        <pm-timecard-day></pm-timecard-day>
+      </div>
     </div>
+    <div class='day'>
+      <label class='day-label'>Friday</label>
+      <div class='timecard-item'>
+        <pm-timecard-day></pm-timecard-day>
+      </div>
+      <div class='timecard-item'>
+        <pm-timecard-day></pm-timecard-day>
+      </div>
+    </div>
+    <div class='day' *ngIf='false'>
+      <label class='day-label'>Saturday</label>
+      <div class='timecard-item'>
+        <pm-timecard-day></pm-timecard-day>
+      </div>
+      <div class='timecard-item'>
+        <pm-timecard-day></pm-timecard-day>
+      </div>
+    </div>
+  </div>
 </div>
