@@ -21,10 +21,10 @@
   </div> -->
 
   <ngb-timepicker [(ngModel)]="timeIn" [meridian]="amPmOnIn"></ngb-timepicker>
-  <button class="btn btn-sm btn-outline-{{amPmOnIn ? 'success' : 'danger'}}" (click)="toggleMeridianIn()">
+  <button *ngIf='displayMeridian' class="btn btn-sm btn-outline-{{amPmOnIn ? 'success' : 'danger'}}" (click)="toggleMeridianIn()">
       Meridian - {{amPmOnIn ? "ON" : "OFF"}}
   </button>
-  <ngb-timepicker [(ngModel)]="timeOut" [meridian]="amPmOnOut"></ngb-timepicker>
-  <button class="btn btn-sm btn-outline-{{amPmOnOut ? 'success' : 'danger'}}" (click)="toggleMeridianOut()">
+  <!-- <ngb-timepicker [(ngModel)]="timeOut" [meridian]="amPmOnOut"></ngb-timepicker>
+  <button *ngIf='displayMeridian' class="btn btn-sm btn-outline-{{amPmOnOut ? 'success' : 'danger'}}" (click)="toggleMeridianOut()">
       Meridian - {{amPmOnOut ? "ON" : "OFF"}}
-  </button>
+  </button> -->

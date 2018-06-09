@@ -7,6 +7,8 @@ display: inline-block;
 .first-block-label{
   display: inline-block;
   width: 40px;
+  vertical-align: top;
+  margin-top: 45px;
   }
 
 .first-block-directive{
@@ -24,6 +26,8 @@ display: inline-block;
         display: inline-block;
         width: 40px;
         margin-left: 15px;
+        vertical-align: top;
+        margin-top: 45px;
         /* width: 3%; */
         }
 

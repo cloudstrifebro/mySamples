@@ -23,6 +23,7 @@ export class TimecardTimeRangeComponent implements OnInit {
 
   public amPmOnIn: boolean;
   public amPmOnOut: boolean;
+  public displayMeridian: boolean;
 
   private _timeOut;
   private _timeIn;
@@ -50,6 +51,10 @@ export class TimecardTimeRangeComponent implements OnInit {
 
     this._timeIn = this.timeIn;
     this._timeOut = this.timeOut;
+
+    this.displayMeridian = false;
+    this.amPmOnIn = true;
+    this.amPmOnOut = true;
 
 
     // const sampleRange: ITimecardTimeRange = {
