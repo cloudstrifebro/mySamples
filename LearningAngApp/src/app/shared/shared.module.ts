@@ -4,12 +4,14 @@ import { StarComponent } from './star.component';
 import { FormsModule } from '@angular/forms';
 import { ConvertToSpacesPipe } from './convert-to-spaces.pipe';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 // import { NgbdDatepickerPopupComponent } from './datepicker-popup.component';
 
 @NgModule({
   imports: [
     CommonModule,
     // FormsModule,
+    AngularFontAwesomeModule,
     NgbModule.forRoot()
   ],
   declarations: [
@@ -22,6 +24,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     FormsModule,
     NgbModule,
+    AngularFontAwesomeModule,
     // NgbdDatepickerPopupComponent,
     ConvertToSpacesPipe
   ]
