@@ -6,22 +6,36 @@ import { LegendService } from './services/legend.service';
     selector: 'pm-root',
     template: `
     <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><a [routerLink]="['/welcome']" class="nav-link">Home</a></li>
-      <li class="nav-item"><a [routerLink]="['/products']" class="nav-link">Product List</a></li>
-      <li class="nav-item"><a [routerLink]="['/timecards']" class="nav-link">Timecard List</a></li>
-      </ul>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-sm navbar-light bg-faded">
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">Logo</a>
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="nav-content">
+        <ul class="navbar-nav">
+        <li class="nav-item"><a [routerLink]="['/welcome']" class="nav-link">Home</a></li>
+        <li class="nav-item"><a [routerLink]="['/products']" class="nav-link">Product List</a></li>
+        <li class="nav-item"><a [routerLink]="['/timecards']" class="nav-link">Timecard List</a></li>
+        </ul>
+      </div>
+      </nav>
       <div>
         <router-outlet></router-outlet>
       </div>
-    </div>
+</div>
     `,
     providers: [ ProductService, LegendService ]
 })
+
+/*
+      <li class="nav-item"><a [routerLink]="['/welcome']" class="nav-link">Home</a></li>
+      <li class="nav-item"><a [routerLink]="['/products']" class="nav-link">Product List</a></li>
+      <li class="nav-item"><a [routerLink]="['/timecards']" class="nav-link">Timecard List</a></li>
+*/
 
 // <h1>{{pageTitle}}</h1>
 // <pm-legends></pm-legends>

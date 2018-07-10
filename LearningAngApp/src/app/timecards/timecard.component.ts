@@ -29,6 +29,7 @@ export class TimecardComponent implements OnInit {
   public isSelected2: boolean;
   public isSelected3: boolean;
   public isSelected4: boolean;
+  public timecardEntry: any[];
 
   constructor() { }
 
@@ -40,6 +41,7 @@ export class TimecardComponent implements OnInit {
     this.radioItem2 = false;
     this.radioItem3 = false;
     this.radioItem4 = false;
+    this.timecardEntry = [];
 
     // const now: Date = new Date();
     // const timecardInDay: NgbDateStruct = {
@@ -67,6 +69,21 @@ export class TimecardComponent implements OnInit {
     //   sampleTimecardDay
     // ];
     // this._timecardDays = this.timecardDays;
+  }
+
+  addToTimecard() {
+    const a: any = {};
+
+    a.day = 'Sunday';
+    a.value = new Date();
+    a.timeDataIn = {};
+    a.timeDataOut = {};
+
+    this.timecardEntry.push(a);
+  }
+
+  saveEntry(entry) {
+    console.log(`entry saved!: ${entry.day}`);
   }
 
   onRadioChange(selectedValue) {

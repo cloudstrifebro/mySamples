@@ -23,9 +23,50 @@
 </div>
 </div>
 <div class='card'>
-  <div class='card-header'>Timecard for week of: {{timecardDate}}</div>
+  <div class='card-header'>Timecard for week of: {{timecardDate | date }}</div>
   <div class='card-body'>
-    <div class='day' *ngIf='false'>
+    <div style="display: inline-block; width: 65%;">
+        Click the button to add an entry for the week.        
+    </div>
+    <div style="width: 35%;display: inline-block;vertical-align: top;">
+      <button type="button" class="form-control" (click)="addToTimecard()">Add Entry</button>
+    </div>
+    <hr />
+    <div>
+      Week Entry:
+    </div>
+    <div *ngFor="let entry of timecardEntry;let i=index; trackBy: index" >   
+      <div>
+          <div>{{entry.value | date: 'medium'}}</div>          
+        </div>  
+      <div>
+        <div style="display: inline-block; width: 220px;vertical-align: top;">
+            <select [(ngModel)]="entry.day" class='form-control' style='display: inline-block;'>
+                <option value='Select a value...'>Select a value...</option>
+                <option value='Sunday'>Sunday</option>
+                <option value='Monday'>Monday</option>
+                <option value='Tuesday'>Tuesday</option>
+                <option value='Wednesday'>Wednesday</option>
+                <option value='Thursday'>Thursday</option>
+                <option value='Friday'>Friday</option>
+                <option value='Saturday'>Saturday</option>
+            </select>
+        </div>
+    </div> 
+      <div class='day'>
+          <!-- <label class='day-label'>{{entry | date: 'EEEE'}}</label> -->
+
+          <!-- <label class='day-label'>{{entry.day}}</label> -->
+          <div class='timecard-item'>
+            <pm-timecard-day></pm-timecard-day>
+          </div>
+          <div class='timecard-item'>
+            <pm-timecard-day></pm-timecard-day>
+          </div>
+      </div>              
+      <div style="display: inline-block; margin-left: 20px;vertical-align: top; margin-bottom: 20px;"><button class="btn btn-primary" (click)="saveEntry(entry)">Save</button></div>
+    </div>
+    <!-- <div class='day' *ngIf='false'>
       <label class='day-label'>Sunday:</label>
       <div class='timecard-item'>
         <pm-timecard-day></pm-timecard-day>
@@ -87,6 +128,6 @@
       <div class='timecard-item'>
         <pm-timecard-day></pm-timecard-day>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
