@@ -8,12 +8,15 @@
     /* display: inline-block; */
   }
 
+  .make-big{
+    font-size: xx-large;
+  }
+
   #card-sample1 .card-body, #card-sample2 .card-body, #card-sample3 .card-body, #card-sample4 .card-body, #card-sample5 .card-body{
     /* align-content: center; */
     /* vertical-align: top; */
     text-transform: capitalize;
     text-align: center;
-    font-size: xx-large;
   }
 
   #card-sample1 .card-header, #card-sample2 .card-header, #card-sample3 .card-header, #card-sample4 .card-header, #card-sample5 .card-header{
@@ -88,23 +91,38 @@
 </div>
 <div id='card-sample1' class='card'>
   <div class='card-header'></div>
-  <div class='card-body'>Orange card</div>
+  <div class='card-body'>
+    <div>Orange Total:</div>
+    <div class="make-big">100</div>
+</div>
 </div>
 <div id='card-sample2' class='card'>
   <div class='card-header'></div>
-  <div class='card-body'>Black Card</div>
+  <div class='card-body'>
+      <div>Black Total:</div>
+      <div class="make-big">100</div>
+  </div>
 </div>
 <div id='card-sample3' class='card'>
   <div class='card-header'></div>
-  <div class='card-body'>Gray Card</div>
+  <div class='card-body'>
+      <div>Gray Total:</div>
+      <div class="make-big">100</div>
+  </div>
 </div>
 <div id='card-sample4' class='card'>
   <div class='card-header'></div>
-  <div class='card-body'>Blue Card</div>
+  <div class='card-body'>
+      <div>Blue Total:</div>
+      <div class="make-big">100</div>
+  </div>
 </div>
 <div id='card-sample5' class='card'>
   <div class='card-header'></div>
-  <div class='card-body'>Red Card</div>
+  <div class='card-body'>
+      <div>Red Total:</div>
+      <div class="make-big">100</div>
+  </div>
 </div>
 <div class='card'>
   <div class='card-header'>Timecard for week of: {{timecardDate}}</div>
