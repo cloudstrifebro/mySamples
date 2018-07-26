@@ -8,7 +8,7 @@ import { WelcomeComponent } from './home/welcome.component';
     RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent},
       { path: '', redirectTo: 'welcome', pathMatch: 'full'},
-      { path: '**', redirectTo: 'welcome', pathMatch: 'full'},
+      { path: '**', redirectTo: 'welcome', pathMatch: 'full'}
       // { path: '**', component: PageNotFoundComponent},
     ], {useHash: true}),
   ],

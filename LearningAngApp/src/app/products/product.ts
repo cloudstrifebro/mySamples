@@ -8,3 +8,11 @@ export interface IProduct {
      starRating: number;
      imageUrl: string;
 }
+
+export interface IProductKendo {
+     ProductID: number;
+     ProductName: string;
+     Discontinued: boolean;
+     UnitsInStock: number;
+     UnitPrice: number;
+ }
