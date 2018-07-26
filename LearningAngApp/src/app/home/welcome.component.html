@@ -4,13 +4,19 @@
     </div>
     <div class="card-body"  >
         <div class="row" >
-<div style='margin-left: 35%;'>
-    <!-- <img src="./assets/images/logo.jpg"
-    class="img-responsive center-block"
-    style="max-height:300px;padding-bottom:50px"/> -->
-
+<div>
+    <div>
+        App used as my playground for angular.
+    </div>
+    <div>
+        Kendo Grid example:
+    </div>
     <pm-kendowrapper></pm-kendowrapper>
-
+    <div class="mr-0 mt-1">
+        <p *ngFor="let alert of alerts">
+                <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
+        </p>
+    </div>
 </div>
         </div>
         <div class="row">
