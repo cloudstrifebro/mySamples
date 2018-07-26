@@ -1,6 +1,73 @@
 <!-- <div *ngFor='let timecardDay of timecardDays'>
   <pm-timecard-day></pm-timecard-day>
 </div> -->
+<style>
+  #card-sample1, #card-sample2, #card-sample3, #card-sample4, #card-sample5{
+    width: 10rem;
+    margin: 10px;
+    /* display: inline-block; */
+  }
+
+  .make-big{
+    font-size: xx-large;
+  }
+
+  #card-sample1 .card-body, #card-sample2 .card-body, #card-sample3 .card-body, #card-sample4 .card-body, #card-sample5 .card-body{
+    /* align-content: center; */
+    /* vertical-align: top; */
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  #card-sample1 .card-header, #card-sample2 .card-header, #card-sample3 .card-header, #card-sample4 .card-header, #card-sample5 .card-header{
+    padding: 2px;
+  }
+
+  #card-sample1 .card-header{
+    /* width: 20rem; */
+    /* margin: 10px; */
+    background-color:orange;
+  }
+  #card-sample2 .card-header{
+    /* width: 20rem; */
+    /* margin: 10px; */
+    background-color:black;
+  }
+  #card-sample3 .card-header{
+    /* width: 20rem; */
+    /* margin: 10px; */
+    background-color:gray;
+  }
+
+    #card-sample4 .card-header{
+    /* width: 20rem; */
+    /* margin: 10px; */
+    background-color:cornflowerblue;
+  }
+
+    #card-sample5 .card-header{
+    /* width: 20rem; */
+    /* margin: 10px; */
+    background-color:red;
+  }
+
+@media only screen and (max-width: 600px) {
+    #card-sample1, #card-sample2, #card-sample3,
+    #card-sample4, #card-sample5 {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    #card-sample1, #card-sample2, #card-sample3,
+    #card-sample4, #card-sample5 {
+      display: inline-block;
+    }
+}
+
+</style>
 <div class='card'>
 <div class='card-header'></div>
 <div class='card-body'>
@@ -21,6 +88,41 @@
   <label>Test 4</label>
 </div>
 </div>
+</div>
+<div id='card-sample1' class='card'>
+  <div class='card-header'></div>
+  <div class='card-body'>
+    <div>Orange Total:</div>
+    <div class="make-big">100</div>
+</div>
+</div>
+<div id='card-sample2' class='card'>
+  <div class='card-header'></div>
+  <div class='card-body'>
+      <div>Black Total:</div>
+      <div class="make-big">100</div>
+  </div>
+</div>
+<div id='card-sample3' class='card'>
+  <div class='card-header'></div>
+  <div class='card-body'>
+      <div>Gray Total:</div>
+      <div class="make-big">100</div>
+  </div>
+</div>
+<div id='card-sample4' class='card'>
+  <div class='card-header'></div>
+  <div class='card-body'>
+      <div>Blue Total:</div>
+      <div class="make-big">100</div>
+  </div>
+</div>
+<div id='card-sample5' class='card'>
+  <div class='card-header'></div>
+  <div class='card-body'>
+      <div>Red Total:</div>
+      <div class="make-big">100</div>
+  </div>
 </div>
 <div class='card'>
   <div class='card-header'>Timecard for week of: {{timecardDate | date }}</div>
