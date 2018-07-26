@@ -11,7 +11,7 @@ export class WelcomeComponent {
     private backup: Array<IAlert>;
 
     constructor() {
-        let successAl: IAlert = {
+        const successAl: IAlert = {
             id: 1,
             type: 'success',
             message: 'This is a success alert.'
