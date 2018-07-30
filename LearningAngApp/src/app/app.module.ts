@@ -14,11 +14,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { TimecardModule } from './timecards/timecard.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { KendowrapperComponent } from './kendowrapper/kendowrapper.component';
+import { KendowrapperComponent } from './kendowrappers/kendowrapper/kendowrapper.component';
 import { CategoriesService } from './services/northwind.service';
 import { EditService } from './services/edit.service';
-import { DdownComponent } from './ddown/ddown.component';
-
+import { DdownComponent } from './bootstrapWrappers/ddown/ddown.component';
 
 
 @NgModule({

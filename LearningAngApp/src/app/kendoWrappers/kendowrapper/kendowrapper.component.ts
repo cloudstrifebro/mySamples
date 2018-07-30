@@ -1,12 +1,12 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { CategoriesService } from '../services/northwind.service';
+import { CategoriesService } from '../../services/northwind.service';
 import { GridDataResult, DataStateChangeEvent } from '@progress/kendo-angular-grid';
 import { State, process } from '@progress/kendo-data-query';
-import { EditService } from '../services/edit.service';
+import { EditService } from '../../services/edit.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { map } from 'rxjs/operators/map';
-import { IProductKendo } from '../products/product';
+import { IProductKendo } from '../../products/product';
 
 
 @Component({
