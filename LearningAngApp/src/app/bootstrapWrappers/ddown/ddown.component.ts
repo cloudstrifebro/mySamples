@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IBsObject } from '../interfaces/ibs-object';
+import { IBsObject } from '../../interfaces/ibs-object';
 
 @Component({
   selector: 'pm-ddown',
