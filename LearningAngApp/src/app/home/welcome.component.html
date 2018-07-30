@@ -2,22 +2,30 @@
     <div class="card-header">
         {{pageTitle}}
     </div>
-    <div class="card-body"  >
-        <div class="row" >
-<div>
-    <div>
-        App used as my playground for angular.
-    </div>
-    <div>
-        Kendo Grid example:
-    </div>
-    <pm-kendowrapper></pm-kendowrapper>
-    <div class="mr-0 mt-1">
-        <p *ngFor="let alert of alerts">
-                <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
-        </p>
-    </div>
-</div>
+    <div class="card-body">
+        <div class="row">
+            <div>
+                <div>
+                    App used as my playground for angular.
+                </div>
+                <hr />
+                <div>
+                    Bootstrap samples:                    
+                </div>
+                <div>
+                    <pm-ddown [main]="dDownObj"></pm-ddown>
+                </div>
+                <hr />
+                <div>
+                    Kendo Grid example:
+                </div>
+                <pm-kendowrapper></pm-kendowrapper>
+                <div class="mr-0 mt-1">
+                    <p *ngFor="let alert of alerts">
+                        <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="row">
             <span class="text-center" style='margin-right: 5px;'>Developed by:</span>

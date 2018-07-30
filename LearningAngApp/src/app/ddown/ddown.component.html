@@ -1,0 +1,6 @@
+<div ngbDropdown class="d-inline-block">
+  <button [(ngModel)]="main.selectedText" name="main.selectedText" class="btn btn-outline-primary" ngbDropdownToggle>{{main.selectedText}}</button>
+  <div ngbDropdownMenu>
+    <button *ngFor="let item of main.ddList" name="item.itemText" class="dropdown-item" (click)="changeValue(item.itemText)">{{item.itemText}}</button>
+  </div>
+</div>

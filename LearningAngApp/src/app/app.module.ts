@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { KendowrapperComponent } from './kendowrapper/kendowrapper.component';
 import { CategoriesService } from './services/northwind.service';
 import { EditService } from './services/edit.service';
+import { DdownComponent } from './ddown/ddown.component';
 
 
 
@@ -25,7 +26,7 @@ import { EditService } from './services/edit.service';
     AppComponent,
     LegendListComponent,
     WelcomeComponent,
-    KendowrapperComponent,
+    KendowrapperComponent
   ],
   imports: [
     BrowserModule,
