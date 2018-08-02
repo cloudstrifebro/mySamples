@@ -38,6 +38,7 @@ export class KendowrapperComponent implements OnInit {
     }
 
     public onStateChange(state: State) {
+        console.log('this.gridState', this.gridState);
         this.gridState = state;
 
         this.editService.read();

@@ -7,7 +7,7 @@ export interface IBsObject {
      /**
       * The text to display on the component.
       */
-     selectedText: String;
+     selectedText: string;
      /**
       * The list to bind to.
       */

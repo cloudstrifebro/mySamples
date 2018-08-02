@@ -17,7 +17,7 @@ export class DdownComponent implements OnInit {
   ngOnInit() {
   }
 
-  changeValue(newText: String) {
+  changeValue(newText: string) {
     this.main.selectedText = newText;
     console.log(newText);
   }

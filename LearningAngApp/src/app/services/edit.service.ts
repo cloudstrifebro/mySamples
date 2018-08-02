@@ -19,6 +19,7 @@ export class EditService extends BehaviorSubject<any[]> {
     private data: any[] = [];
 
     public read() {
+        console.log('this.data', this.data);
         if (this.data.length) {
             return super.next(this.data);
         }
