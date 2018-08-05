@@ -7,19 +7,22 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { GridModule, ExcelModule } from '@progress/kendo-angular-grid';
 import { DdownComponent } from '../bootstrapWrappers/ddown/ddown.component';
-// import { NgbdDatepickerPopupComponent } from './datepicker-popup.component';
+import { CustomGridComponent } from '../kendoWrappers/customGrid/customGrid.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     AngularFontAwesomeModule,
+    GridModule,
+    ExcelModule,
     NgbModule.forRoot()
   ],
   declarations: [
     StarComponent,
     ConvertToSpacesPipe,
-    DdownComponent
+    DdownComponent,
+    CustomGridComponent
     // NgbdDatepickerPopupComponent
   ],
   exports: [
@@ -32,6 +35,7 @@ import { DdownComponent } from '../bootstrapWrappers/ddown/ddown.component';
     AngularFontAwesomeModule,
     GridModule,
     ExcelModule,
+    CustomGridComponent,
     // NgbdDatepickerPopupComponent,
     ConvertToSpacesPipe,
     DdownComponent

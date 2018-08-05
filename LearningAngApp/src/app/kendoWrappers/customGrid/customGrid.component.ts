@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { aggregateBy } from '@progress/kendo-data-query';
 
 @Component({
-    selector: 'pm-kendowrapper',
+    selector: 'pm-customgrid',
     template: `
         <kendo-grid [kendoGridBinding]="products" [height]="400" [group]="group" [sortable]="true">
             <ng-template kendoGridToolbarTemplate>
@@ -38,7 +38,7 @@ import { aggregateBy } from '@progress/kendo-data-query';
       </kendo-grid>
     `
 })
-export class KendowrapperComponent {
+export class CustomGridComponent {
     public aggregates: any[] = [{field: 'UnitPrice', aggregate: 'sum'}];
 
     public products: any[] = sampleProducts;

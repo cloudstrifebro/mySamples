@@ -1,20 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CustomGridComponent } from './customGrid.component';
 
-import { KendowrapperComponent } from './kendowrapper.component';
-
-describe('KendowrapperComponent', () => {
-  let component: KendowrapperComponent;
-  let fixture: ComponentFixture<KendowrapperComponent>;
+describe('CustomGridComponent', () => {
+  let component: CustomGridComponent;
+  let fixture: ComponentFixture<CustomGridComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ KendowrapperComponent ]
+      declarations: [ CustomGridComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(KendowrapperComponent);
+    fixture = TestBed.createComponent(CustomGridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

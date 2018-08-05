@@ -8,8 +8,16 @@ import { IBsObject } from '../../interfaces/ibs-object';
 })
 export class DdownComponent implements OnInit {
 
-  @Input()
-  public main: IBsObject;
+  private _main: IBsObject;
+
+  @Input('main')
+  public set main(v : IBsObject) {
+    this._main = v;
+  }
+  public get main() : IBsObject {
+    return this._main;
+  }
+  
 
   constructor() {
    }
